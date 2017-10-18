@@ -1,18 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-echo "Wpisz nazwe pliku"
-
-read plik
-
-cat $plik|awk 
-{ 
-	if (length($0) > dlugosc) 
-	{ 
-		dlugosc=length($0);
-		linia=$0;
-		number=NR; 
-	} 
-} 
-		END 
-		{ 
-		print number, dlugosc, linia }
+awk '(length>m){m=length;a=$0;b=NR} END {print a; print m; print b;}'
