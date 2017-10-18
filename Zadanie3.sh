@@ -1,24 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
-echo "Haslo"
+x = "pass"
+echo 'Podaj haslo'
+read pass
 
-flagShow=0
-flagNoShow=0;
-
-while [ $flagShow = 0 ]
-do
-  read haslo
-  if [ $haslo != "haslo" ]
-  then
-    echo "Niepoprawne"
-    ((flagNoShow++))
-    if [ $flagNoShow == 2 ]
-    then
-      exit 1
-    fi
-  else
-    flagShow=1
-  fi
-done
-
-ls -al
+if [ $pass != $x]; then
+ 	read pass
+ 	if [ $pass != $x]; then
+ 		exit 0
+ 	else 
+ 		ls -al
+ 	fi
+else 
+ 	ls -al
+fi
