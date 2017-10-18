@@ -2,6 +2,6 @@
 
 echo "Wpisz nazwe pliku"
 
-read nazwapliku
+read plik
 
-cat $nazwapliku|sed -i '5,$d' $nazwapliku
+cat $plik|sed -i '5,$d' $plik
