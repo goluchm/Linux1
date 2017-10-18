@@ -2,6 +2,6 @@
 
 echo "Wpisz nazwe pliku"
 
-read nazwaplik
+read plik
 
-cat $nazwaplik|sed -n '/^ha/p'
+cat $plik|sed -n '/^ha/p'
