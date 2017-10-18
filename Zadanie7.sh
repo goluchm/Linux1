@@ -1,5 +1,3 @@
-#!/bin/bash
-echo "Plik wejsciowy: "
-read nazwapliku
+#!/usr/bin/env bash
 
-cat $nazwapliku|awk 'NR % 2 {print}'
+awk 'NR % 2 == 0'
